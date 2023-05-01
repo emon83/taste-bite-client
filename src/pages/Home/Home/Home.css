@@ -1,0 +1,10 @@
+.hero-img img{
+    width: 750px;
+    height: 400px;
+}
+.banner-title{
+    font-family: 'Playfair Display', serif;
+}
+.banner-text{
+    border-radius: 5px;
+}

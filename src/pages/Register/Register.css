@@ -1,0 +1,8 @@
+.form_container{
+    width: 450px;
+    height: 650px;
+    margin: 50px auto;
+    border: 1px solid #95a0a7;
+    border-radius: 8px;
+    padding-left: 40px;
+}
