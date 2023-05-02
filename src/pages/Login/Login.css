@@ -58,4 +58,15 @@
   .btn__submit:hover {
     background: rgba(86, 84, 81, 0.5);
   }
-  
+.login-google {
+  width: 361px;
+height: 41px;
+
+background: #FFFFFF;
+border: 1px solid #C7C7C7;
+border-radius: 57px;
+}
+.line{
+  width: 200px;
+  border: 1px solid #AAAAAA;
+}

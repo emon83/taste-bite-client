@@ -4,7 +4,7 @@ import SingleCategory from '../SingleCategory/SingleCategory';
 const Category = () => {
     const [categoryData, setCategoryData] = useState('');
     useEffect(()=>{
-        fetch('http://localhost:5000/allData')
+        fetch('https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/allData')
         .then(response=> response.json())
         .then(data => setCategoryData(data))
     }, [])

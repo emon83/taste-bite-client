@@ -20,11 +20,6 @@ const router = createBrowserRouter([
             path: '/',
             element: <Home></Home>
         },
-        /* {
-            path: '/chefCard/:id',
-            element: <ChefCard></ChefCard>,
-            loader: ({params}) => fetch(`http://localhost:5000/allData/${params.id}`)
-        }, */
         {
             path: '/blog',
             element: <Blog></Blog>
@@ -40,12 +35,12 @@ const router = createBrowserRouter([
         {
             path: '/recipePage',
             element: <RecipePage></RecipePage>,
-            loader: () => fetch('http://localhost:5000/recipeData')
+            loader: () => fetch('https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData')
         },
         {
             path: '/recipePage/:id',
             element: <ChefDetails></ChefDetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/recipeData/${params.id}`)
+            loader: ({params}) => fetch(`https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData/${params.id}`)
             
         },
       ]
