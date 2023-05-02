@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img from '../../../images/banner-cake.jpg'
 import './Home.css'
+import { Link } from "react-router-dom";
+import Category from "../Category/Category";
 
 const Home = () => {
   return (
@@ -19,6 +21,7 @@ const Home = () => {
             </h5>
         </div>
       </div>
+      <Category></Category>
     </div>
   );
 };
