@@ -7,7 +7,8 @@ import Blog from '../pages/Blog/Blog';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import RecipePage from '../pages/RecipePage/RecipePage';
-import ChefCard from '../pages/Home/ChefCard/ChefCard';
+import SingleChef from '../pages/Home/SingleChef/SingleChef';
+import ChefDetails from '../pages/ChefDetails/ChefDetails';
 
 const router = createBrowserRouter([
     {
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
             path: '/',
             element: <Home></Home>
         },
-        {
+        /* {
             path: '/chefCard/:id',
             element: <ChefCard></ChefCard>,
             loader: ({params}) => fetch(`http://localhost:5000/allData/${params.id}`)
-        },
+        }, */
         {
             path: '/blog',
             element: <Blog></Blog>
@@ -37,8 +38,15 @@ const router = createBrowserRouter([
             element: <Register></Register>
         },
         {
-            path: '/',
-            element: <Home></Home>
+            path: '/recipePage',
+            element: <RecipePage></RecipePage>,
+            loader: () => fetch('http://localhost:5000/recipeData')
+        },
+        {
+            path: '/recipePage/:id',
+            element: <ChefDetails></ChefDetails>,
+            loader: ({params}) => fetch(`http://localhost:5000/recipeData/${params.id}`)
+            
         },
       ]
     },

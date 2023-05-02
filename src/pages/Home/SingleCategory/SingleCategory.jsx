@@ -8,7 +8,7 @@ const SingleCategory = ({singleData}) => {
     return (
         <div>
             <img className='w-64 h-48 rounded-md' src={food_img} alt="" />
-            <h4 className='text-xl font-semibold card_title -mt-10 text-white ml-10'><Link to={`/chefCard/${_id}`}>{country} Food</Link></h4>
+            <h4 className='text-xl font-semibold card_title -mt-10 text-white ml-10'><Link to='/recipePage'>{country} Food</Link></h4>
         </div>
     );
 };

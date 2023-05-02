@@ -26,13 +26,3 @@ const Category = () => {
 };
 
 export default Category;
-/* 
-<img src="https://i.ibb.co/WWvpTgn/americian-food.jpg" alt="americian-food" border="0">
-<img src="https://i.ibb.co/yFDWp6H/chinese-food.jpg" alt="chinese-food" border="0">
-<img src="https://i.ibb.co/PFFxgwt/indian-food.jpg" alt="indian-food" border="0">
-<img src="https://i.ibb.co/64KQ3J0/itilian-food.jpg" alt="itilian-food" border="0">
-<img src="https://i.ibb.co/CKyLrY8/japan-food.jpg" alt="japan-food" border="0">
-<img src="https://i.ibb.co/TYHL1FY/Panta-Ilish.jpg" alt="Panta-Ilish" border="0">
-<img src="https://i.ibb.co/k1CRCdB/thai-food.jpg" alt="thai-food" border="0">
-
-*/

@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleChef = ({singleData}) => {
+    const {id, name, img, experience, recipe, likes} = singleData;
     console.log(singleData);
-    const {name, img, experience, recipe, likes} = singleData;
     return (
         <div className="card w-full bg-base-100 shadow-xl">
   <figure><img className='w-72 h-64' src={img} alt="Shoes" /></figure>
@@ -14,7 +15,7 @@ const SingleChef = ({singleData}) => {
         <p>Likes: {likes}</p>
     </div>
     <div className="card-actions justify-center">
-      <button className="btn btn-primary">View Recipes</button>
+      <Link to={`/recipePage/${id}`}><button className="btn btn-primary">View Recipes</button></Link>
     </div>
   </div>
 </div>
