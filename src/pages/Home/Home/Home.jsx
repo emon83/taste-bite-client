@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Category from "../Category/Category";
 import SectionOne from "../SectionOne/SectionOne";
 import SectionTwo from "../SectionTwo/SectionTwo";
+import NewsLatterSection from "../NewsLatterSection/NewsLatterSection";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Category></Category>
       <SectionOne></SectionOne>
       <SectionTwo></SectionTwo>
+      <NewsLatterSection></NewsLatterSection>
     </div>
   );
 };
