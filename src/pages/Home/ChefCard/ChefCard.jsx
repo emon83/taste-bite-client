@@ -7,7 +7,7 @@ const ChefCard = () => {
   const chefData = data.chef;
   console.log(chefData);
   return (
-    <div className="mx-20 lg:mx-40 my-10">
+    <div className="mx-4 sm:mx-20 lg:mx-40 my-10">
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {chefData &&
           chefData.map((singleData) => (

@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <div>
     <Pdf targetRef={ref} filename="code-example.pdf">
-      {({ toPdf }) => <button className='btn btn-ghost btn-sm' onClick={toPdf}>Generate Pdf</button>}
+      {({ toPdf }) => <button className='btn btn-ghost btn-sm ml-20 lg:ml-36' onClick={toPdf}>Generate Pdf</button>}
     </Pdf>
     <div  ref={ref}>
     <div className="bg-gray-50 pt-4 pb-6 mt-4 mb-20">
