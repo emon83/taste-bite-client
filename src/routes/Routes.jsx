@@ -9,6 +9,7 @@ import Register from '../pages/Register/Register';
 import RecipePage from '../pages/RecipePage/RecipePage';
 import SingleChef from '../pages/Home/SingleChef/SingleChef';
 import ChefDetails from '../pages/ChefDetails/ChefDetails';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,17 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: '/recipePage',
+            element: <PrivateRoute><RecipePage></RecipePage></PrivateRoute>,
+            loader: () => fetch('https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData')
+        },
+        {
+            path: '/recipePage/:id',
+            element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
+            loader: ({params}) => fetch(`https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData/${params.id}`)
+            
         },
         {
             path: '/blog',
@@ -32,19 +44,13 @@ const router = createBrowserRouter([
             path: '/register',
             element: <Register></Register>
         },
-        {
-            path: '/recipePage',
-            element: <RecipePage></RecipePage>,
-            loader: () => fetch('https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData')
-        },
-        {
-            path: '/recipePage/:id',
-            element: <ChefDetails></ChefDetails>,
-            loader: ({params}) => fetch(`https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/recipeData/${params.id}`)
-            
-        },
       ]
     },
   ]);
 
 export default router;
+
+/* 
+section data 1: https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/sectionData1
+section data 2: https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/sectionData2
+*/

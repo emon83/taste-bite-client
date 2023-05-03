@@ -4,8 +4,8 @@ import RecipeList from "../RecipeList/RecipeList";
 
 const ChefDetails = () => {
   const data = useLoaderData();
-  console.log(data);
-  const { name, img, about, likes, recipe, experience, recipeList } = data;
+  //console.log(data);
+  const {id, name, img, about, likes, recipe, experience, recipeList } = data;
   return (
     <div className="mx-20 lg:mx-40 my-10">
       <div className="card lg:card-side bg-base-100 shadow-xl">
@@ -25,8 +25,8 @@ const ChefDetails = () => {
       <h4 className="text-xl font-semibold text-center mt-10">View Recipe</h4>
         <div className="lg:grid grid-cols-2 gap-8">
         {
-        recipeList.map((singleRecipe, index)=> <RecipeList
-         key={index} singleRecipe={singleRecipe}
+        recipeList.map(singleRecipe=> <RecipeList
+         key={singleRecipe.id} singleRecipe={singleRecipe}
          ></RecipeList>)
       }
         </div>

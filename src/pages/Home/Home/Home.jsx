@@ -3,6 +3,8 @@ import img from '../../../images/banner-cake.jpg'
 import './Home.css'
 import { Link } from "react-router-dom";
 import Category from "../Category/Category";
+import SectionOne from "../SectionOne/SectionOne";
+import SectionTwo from "../SectionTwo/SectionTwo";
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
         </div>
       </div>
       <Category></Category>
+      <SectionOne></SectionOne>
+      <SectionTwo></SectionTwo>
     </div>
   );
 };

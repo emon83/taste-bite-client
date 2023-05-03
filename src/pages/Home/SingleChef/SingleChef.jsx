@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SingleChef = ({singleData}) => {
     const {id, name, img, experience, recipe, likes} = singleData;
-    console.log(singleData);
+    //console.log(singleData);
     return (
         <div className="card w-full bg-base-100 shadow-xl">
   <figure><img className='w-72 h-64' src={img} alt="Shoes" /></figure>
