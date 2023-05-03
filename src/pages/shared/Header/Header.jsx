@@ -58,13 +58,20 @@ const Header = () => {
             </NavLink>
           </li>
           {user ? (
-            <li>
-              <Link to="/login">
-                <button onClick={handleLogOut} className="btn btn-ghost">
-                  Logout
-                </button>
-              </Link>
-            </li>
+            <div className="flex items-center gap-2">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img title={user?.displayName} src={user?.photoURL} />
+                </div>
+              </label>
+              <li>
+                <Link>
+                  <button onClick={handleLogOut} className="btn btn-ghost">
+                    Logout
+                  </button>
+                </Link>
+              </li>
+            </div>
           ) : (
             <li>
               <Link to="/login">
@@ -161,16 +168,29 @@ const Header = () => {
                     </li>
                     {/* <li><Link to="/login"><button className="btn btn-ghost -ml-4">Login</button></Link></li> */}
                     {user ? (
-                      <li>
-                        <Link to="/login">
-                          <button
-                            onClick={handleLogOut}
-                            className="btn btn-ghost -ml-4"
-                          >
-                            Logout
-                          </button>
-                        </Link>
-                      </li>
+                      <div className="flex items-start flex-col gap-2">
+                        <label
+                          tabIndex={0}
+                          className="btn btn-ghost btn-circle avatar"
+                        >
+                          <div className="w-10 rounded-full">
+                            <img
+                              title={user?.displayName}
+                              src={user?.photoURL}
+                            />
+                          </div>
+                        </label>
+                        <li>
+                          <Link>
+                            <button
+                              onClick={handleLogOut}
+                              className="btn btn-ghost -ml-4"
+                            >
+                              Logout
+                            </button>
+                          </Link>
+                        </li>
+                      </div>
                     ) : (
                       <li>
                         <Link to="/login">

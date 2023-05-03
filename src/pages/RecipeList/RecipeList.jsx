@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const RecipeList = ({singleRecipe}) => {
+    const [btnDisabled, setBtnDisabled] = useState(false);
+
+    const handleAddFavorite = (event) => {
+        toast('You added favorite recipe')
+        setBtnDisabled(true);;
+    }
     //console.log(singleRecipe);
     const {name, img, ingredients, method, ratings} = singleRecipe;
     return (
@@ -11,7 +19,8 @@ const RecipeList = ({singleRecipe}) => {
             {ingredients && ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
             <p>Method: {method}</p>
             <p>Ratings: {ratings}</p>
-            <button className="btn btn-ghost my-3 btn-sm">Add Favorite</button>
+            <button onClick={handleAddFavorite} className="btn btn-ghost my-3 btn-sm" disabled={btnDisabled}>Add Favorite</button>
+            <ToastContainer/>
         </div>
     );
 };
