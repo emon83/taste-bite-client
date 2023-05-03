@@ -6,5 +6,10 @@
     font-family: 'Playfair Display', serif;
 }
 .banner-text{
-    border-radius: 5px;
+    background-color: rgb(206, 241, 255);
 }
+@media only screen and (max-width: 576px) {
+    .hero-img img{
+        height: 300px;
+    }
+  }

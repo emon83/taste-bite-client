@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleCategory from '../SingleCategory/SingleCategory';
+import './Category.css'
 
 const Category = () => {
     const [categoryData, setCategoryData] = useState('');
@@ -10,9 +11,9 @@ const Category = () => {
     }, [])
     //console.log(categoryData);
     return (
-        <div className='my-20'>
-            <h2 className='text-2xl font-bold my-8'>Hand-Picked Collection</h2>
-           <div className='grid grid-cols-2 gap-6 lg:grid-cols-4'>
+        <div className='mt-12 sm:mt-28'>
+            <h2 className='category-title text-2xl sm:text-3xl font-bold my-5 text-center sm:text-start'>Hand-Picked Collection</h2>
+           <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-4 w-full'>
            {
             categoryData &&
                 categoryData.map(singleData => <SingleCategory

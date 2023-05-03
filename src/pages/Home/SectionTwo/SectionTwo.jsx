@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleSectionTwo from '../SingleSectionTwo/SingleSectionTwo';
+import './SectionTwo.css'
+
 
 const SectionTwo = () => {
     const [sectionData2, setSectionData2] = useState('');
@@ -11,8 +13,8 @@ const SectionTwo = () => {
     }, [])
     //console.log(sectionData2);
     return (
-        <div className='my-40'>
-            <h2 className='text-3xl font-bold my-8'>What's New</h2>
+        <div className='my-16 sm:my-28'>
+            <h2 className='new-title text-2xl sm:text-3xl font-bold sm:my-6 text-center sm:text-start'>What's New</h2>
             {
             sectionData2 &&
                 sectionData2.map(sectionTwo => <SingleSectionTwo

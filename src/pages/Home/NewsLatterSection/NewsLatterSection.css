@@ -1,3 +1,7 @@
+.news-title {
+    font-family: "Playfair Display", serif;
+}
+
 .news-email{
     width: 100vh;
     margin: 20px auto;
@@ -13,3 +17,16 @@
     font-size: 18px;
     padding-left: 10px;
 }
+
+@media only screen and (max-width: 576px) {
+    .news-email{
+        height: 120px;
+        width: 265px;
+        margin-left: 20px;
+    }
+    .email-input{
+        width: 180px;
+        height: 50px;
+    }
+  }
+  

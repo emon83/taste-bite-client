@@ -1,0 +1,19 @@
+.card-image{
+    width: 612px;
+    height: 312px;
+}
+.card_body{
+    width: 612px;
+}
+@media only screen and (max-width: 576px) {
+    .card-image{
+        height: 282px;
+    }
+    .card_body{
+        width: 350px;
+    }
+
+}
+.card-title{
+    font-family: 'Playfair Display', serif;
+}
