@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDgiJ43SmTjof1I8taUf7lMC8AtT_aWW8o",
-  authDomain: "tastebite-chef-recipe.firebaseapp.com",
-  projectId: "tastebite-chef-recipe",
-  storageBucket: "tastebite-chef-recipe.appspot.com",
-  messagingSenderId: "792688310145",
-  appId: "1:792688310145:web:e5e8cd42e7e155a3a4da80"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
