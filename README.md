@@ -10,4 +10,4 @@ Features Add this Project :
  * Fifth When clicking the Favorite button, show a toast message showing the recipe is your favorite and disable the button. and create 404, blog page etc. lots of things.
 
 
-#### Project live site link:  ####
+#### Project live site link: https://tastebite-chef-recipe.web.app/recipePage ####
