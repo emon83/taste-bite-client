@@ -1,0 +1,26 @@
+.user-container {
+    width: 50%;
+    height: auto;
+    background-color: #ffffff;
+    margin: 50px auto;
+    margin-top: 2rem;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+.form-control input {
+    height: 32px;
+}
+.user {
+    margin: 20px auto;
+}
+
+.user-title {
+    font-family: 'Playfair Display', serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .user-container{
+        width: 90%;
+        margin: 20px auto;
+    }
+  }

@@ -79,7 +79,7 @@ const Register = () => {
         </div>
         <input className="btn__submit" type="submit" value="Sign Up" />
       </form>
-      <p><small>Already have an account? <Link to="/login" className='text-yellow-500'>Login</Link></small></p>
+      <p className='mt-4'><small>Already have an account? <Link to="/login" className='text-gray-600 font-semibold'>Login</Link></small></p>
       <p className="text-red-600">{error}</p>
     </div>
     );

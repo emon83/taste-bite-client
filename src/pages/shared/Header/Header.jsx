@@ -57,13 +57,25 @@ const Header = () => {
               Blog
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/about"
+              aria-label="About"
+              title="About"
+              className={({ isActive }) => (isActive ? "active" : "default")}
+            >
+              About Us
+            </NavLink>
+          </li>
           {user ? (
             <div className="flex items-center gap-2">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img title={user?.displayName} src={user?.photoURL} />
-                </div>
-              </label>
+              <Link to="/userDetails">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img title={user?.displayName} src={user?.photoURL} />
+                  </div>
+                </label>
+              </Link>
               <li>
                 <Link>
                   <button onClick={handleLogOut} className="btn btn-ghost">
@@ -166,20 +178,32 @@ const Header = () => {
                         Blog
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        to="/about"
+                        aria-label="About"
+                        title="About"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        About Us
+                      </Link>
+                    </li>
                     {/* <li><Link to="/login"><button className="btn btn-ghost -ml-4">Login</button></Link></li> */}
                     {user ? (
                       <div className="flex items-start flex-col gap-2">
-                        <label
-                          tabIndex={0}
-                          className="btn btn-ghost btn-circle avatar"
-                        >
-                          <div className="w-10 rounded-full">
-                            <img
-                              title={user?.displayName}
-                              src={user?.photoURL}
-                            />
-                          </div>
-                        </label>
+                        <Link to="/userDetails">
+                          <label
+                            tabIndex={0}
+                            className="btn btn-ghost btn-circle avatar"
+                          >
+                            <div className="w-10 rounded-full">
+                              <img
+                                title={user?.displayName}
+                                src={user?.photoURL}
+                              />
+                            </div>
+                          </label>
+                        </Link>
                         <li>
                           <Link>
                             <button

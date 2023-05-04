@@ -1,17 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./Login.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo1 from '../../images/google.png'
 import logo2 from '../../images/github.png'
 import { AuthContext } from "../../provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [show, setShow] = useState(false);
   const [error, setError] = useState('');
-  const { googleSignIn, githubSignIn, signIn } = useContext(AuthContext);
+  const { googleSignIn, githubSignIn, signIn, resetPassword } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
+  const emailRef = useRef();
   console.log('login page location', location);
 
   const from = location.state?.from?.pathname || "/"
@@ -34,6 +37,22 @@ const Login = () => {
     .catch(error => {
         setError(error.message);
         console.log(error);
+    })
+  };
+
+  const handleResetPassword = (event) => {
+    const email = emailRef.current.value;
+    if (!email) {
+      toast('Please provide  your email address to reset password');
+      return;
+    }
+    resetPassword(email)
+    .then( () => {
+      toast('Please check your email');
+    })
+    .catch(error => {
+      console.log(error);
+      setError(error.message);
     })
   };
 
@@ -77,6 +96,7 @@ const Login = () => {
               type="email"
               placeholder="email"
               name="email"
+              ref={emailRef}
               id=""
               required
             />
@@ -99,9 +119,17 @@ const Login = () => {
           <input className="btn__submit" type="submit" value="Login" />
         </form>
         <p>
+        <small>
+          Forget PassWord? Please{" "}
+          <button onClick={handleResetPassword} className="btn btn-link btn-xs text-gray-600 mt-4">
+            Reset Password
+          </button>
+        </small>
+      </p>
+        <p>
           <small>
             New to Tastebite?{" "}
-            <Link to="/register" className="text-yellow-500">
+            <Link to="/register" className="text-gray-600 font-semibold">
               Create an Account
             </Link>
           </small>
@@ -121,6 +149,7 @@ const Login = () => {
       <img className="w-6 h-6 ml-4" src={logo2} alt="" />
         <button className="ml-14">Continue with GitHub</button>
       </div>
+      <ToastContainer/>
     </>
   );
 };

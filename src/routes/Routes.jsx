@@ -10,6 +10,8 @@ import RecipePage from '../pages/RecipePage/RecipePage';
 import SingleChef from '../pages/Home/SingleChef/SingleChef';
 import ChefDetails from '../pages/ChefDetails/ChefDetails';
 import PrivateRoute from './PrivateRoute';
+import UserDetails from '../pages/UserDetails/UserDetails';
+import AboutUs from '../pages/AboutUs/AboutUs';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
         {
             path: '/blog',
             element: <Blog></Blog>
+        },
+        {
+            path: '/about',
+            element: <AboutUs></AboutUs>
+        },
+        {
+            path: '/userDetails',
+            element: <UserDetails></UserDetails>
         },
         {
             path: '/login',
