@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const UserDetails = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
+    //console.log(user);
     return (
         <div className='user-page bg-gray-100 py-4 md:py-10'>
             <div className='user-container'>
@@ -29,11 +29,11 @@ const UserDetails = () => {
                         <form className='mt-8'>
                             <div className='form-control'>
                             <label htmlFor="name">Upgrade your Display Name</label>
-                            <input className='h-8' type="text" placeholder='name' />
+                            <input type="text" placeholder='name' />
                             </div>
                             <div className='form-control'>
                             <label htmlFor="photo">Upgrade your profile photo</label>
-                            <input className='h-8' type="text" placeholder='photo url' />
+                            <input type="text" placeholder='photo url' />
                             </div>
                         </form>
                         <div className="modal-action">

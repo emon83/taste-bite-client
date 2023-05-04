@@ -1,0 +1,25 @@
+.about-img{
+    width: 150px;
+}
+
+.about-me{
+    width: 720px;
+}
+
+.about-name{
+    font-family: 'Playfair Display', serif;
+}
+
+@media only screen and (max-width: 576px) {
+    .about-img{
+        width: 250px;
+        margin: 0 auto;
+    }
+    
+    .about-me{
+        width: 360px;
+    }
+    .about-container{
+        text-align: center;
+    }
+  }

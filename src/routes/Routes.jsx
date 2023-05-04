@@ -40,7 +40,8 @@ const router = createBrowserRouter([
         },
         {
             path: '/about',
-            element: <AboutUs></AboutUs>
+            element: <AboutUs></AboutUs>,
+            loader: () => fetch('https://tastebite-chef-recipe-hunter-server-emon83.vercel.app/aboutUs')
         },
         {
             path: '/userDetails',

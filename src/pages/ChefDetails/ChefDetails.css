@@ -2,8 +2,23 @@
     font-family: 'Playfair Display', serif;
 }
 
+.card-img{
+    width: 550px;
+}
+
+.card-body {
+    width: 550px;
+}
+
 @media only screen and (max-width: 576px) {
     .chef-bio{
         width: 340px;
+    }
+    .card-img{
+        width: 350px;
+    }
+    
+    .card-body {
+        width: auto;
     }
   }

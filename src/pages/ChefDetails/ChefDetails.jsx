@@ -12,9 +12,9 @@ const ChefDetails = () => {
     <div className="mx-4 sm:mx-20 lg:mx-40 my-10">
       <div className="card lg:card-side bg-base-100">
         <figure>
-          <img style={{ width: "550px" }} src={img} alt="Album" />
+          <img  className="card-img"/* style={{ width: "550px" }} */ src={img} alt="Album" />
         </figure>
-        <div className="card-body" style={{ width: "550px" }}>
+        <div className="card-body" /* style={{ width: "550px" }} */>
           <h2 className="card-title text-3xl mb-6">{name}</h2>
           <p className="chef-bio"><span className="font-bold">Chef Bio: </span><span className="text-gray-600">{about}</span></p>
           <p className="my-3"><span className="font-bold">Experience:</span> {experience} years</p>
